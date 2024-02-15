@@ -1,0 +1,29 @@
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background: #F4DFE4;
+}
+
+
+body{
+    background-color: rosybrown;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none; /* Om de standaardpuntjes van de lijst te verwijderen */
+    padding: 0;
+}
+
+li{
+    display: grid;
+}
+main img{
+    max-height: 16em;
+}

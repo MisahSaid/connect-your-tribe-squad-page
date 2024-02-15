@@ -1,10 +1,31 @@
 <%- include('./partials/head') %>
+<div>
+  <header>
+    <h1>squad 1E</h1>
+    <img src="/images/search.svg"><p>search</p>
+  </header>
 
-<h2>Students</h2>
-<ul>
-  <% persons.forEach(person => { %>
-    <li><a href="./person/<%= person.id %>"><%= person.name %></a>, squad_id <%= person.squad_id %></li>
-  <% }) %>
-</ul>
+  <nav>
+    <ul>
+      <li>Geografisch</li>
+      <li>Naam</li>
+      <li>Leeftijd</li>
+      <li>Nickname</li>
+      <li>Squad</li>
+    </ul>
+  </nav>
+
+  <main>
+    <ul>
+        <% persons.forEach(person => { %>
+          <li>
+            <a href="./person/<%= person.id %>"><%= person.name %></a>
+            <img src="/images/<%= person.name.toLowerCase() %>-sonny.png">
+          </li>
+        <% }) %>
+    </ul>    
+  </main>
+</div>
+
 
 <%- include('./partials/foot') %>
