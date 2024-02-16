@@ -1,22 +1,25 @@
 <%- include('./partials/head') %>
 <div>
-  <header>
-    <h1>squad 1E</h1>
-    <img src="/images/search.svg"><p>search</p>
-  </header>
-
-  <nav>
-    <ul>
-      <li>Geografisch</li>
-      <li>Naam</li>
-      <li>Leeftijd</li>
-      <li>Nickname</li>
-      <li>Squad</li>
-    </ul>
-  </nav>
-
   <main>
-    <ul>
+    <header>
+      <h1>squad 1E</h1>
+        <div class="search">
+          <img src="/images/search.svg">
+          <p>search</p>
+        </div>
+    </header>
+
+    <form>
+      <ul>
+        <li>Geografisch</li>
+        <li>Naam</li>
+        <li>Leeftijd</li>
+        <li>Nickname</li>
+        <li>Squad</li>
+      </ul>
+    </form>
+
+    <ul class="person">
         <% persons.forEach(person => { %>
           <li>
             <a href="./person/<%= person.id %>"><%= person.name %></a>

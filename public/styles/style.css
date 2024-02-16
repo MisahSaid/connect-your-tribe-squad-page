@@ -6,6 +6,7 @@
 
 :root{
     --background: #F4DFE4;
+    --formbg: #E8E8E8;
 }
 
 
@@ -13,17 +14,67 @@ body{
     background-color: rosybrown;
 }
 
-ul{
+main{
+    background-color: var(--formbg);
+    border-radius: 1%;
+    margin: 0 auto; /* stel de linker- en rechtermarges automatisch in */
+    margin-top: 10%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: .5fr 5fr;
+    max-width: 70%;
+    max-height: 70vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+header{
+    grid-area: 1/ 2 / 2 / 3;
+    /* box-shadow: x-offset y-offset blur spread color; */
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: left; /* Align items to the start and end of the container */
+    align-items: center;
+}
+
+
+.person{
+    grid-area: 2 / 2 / 3 /3;
+    background-color: var(--background);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    list-style-type: none; /* Om de standaardpuntjes van de lijst te verwijderen */
+    overflow-y: auto; /* Allow vertical scrolling within the .person section */
+    max-height: 100%;
+}
+
+.person a{
+    display: flex;
+    justify-content: center; /* Center the content horizontally within the anchor tag */
+    align-items: center
+}
+
+ul:nth-child(2){
+    list-style-type: none;
     padding: 0;
+}
+
+form{
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+form ul{
+    background-color: var(--formbg);
 }
 
 li{
     display: grid;
+    grid-auto-flow: column-reverse;
 }
-main img{
-    max-height: 16em;
+li img{
+    max-height: 10em;
+    margin: 1em;
+    grid-area: 1 / 1/ 1 /2;
 }
