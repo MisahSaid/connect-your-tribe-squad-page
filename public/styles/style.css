@@ -7,11 +7,25 @@
 :root{
     --background: #F4DFE4;
     --formbg: #E8E8E8;
+    --hoverbackground: #DBCDCC;
+    --headerbg:#FAF5F7;
+    --boldtext: 'Poppins-Medium';
+    --normaltext: 'Poppins-Regular';
 }
 
+@font-face {
+    font-family:'Poppins-Regular', sans-serif ;
+    src: url(/public/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Medium', sans-serif ;
+    src: url(/public/fonts/Poppins-Medium.ttf);
+}
 
 body{
     background-color: rosybrown;
+    font-family: var(--normaltext);
 }
 
 main{
@@ -37,6 +51,7 @@ header{
     display: flex;
     justify-content: left; /* Align items to the start and end of the container */
     align-items: center;
+    background-color: var(--headerbg);
 }
 
 
@@ -63,18 +78,48 @@ ul:nth-child(2){
 
 form{
     grid-area: 1 / 1 / 3 / 2;
+    margin-left: 1em;
+    margin-top: 3.5em;
+}
+
+form li{
+    color: #918D8E;
+    padding-top: .5em;
 }
 
 form ul{
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--formbg);
+}
+
+.background-change img{
+    max-height: 20px;
+}
+
+.background-change p{
+    font-size: 16px;
 }
 
 li{
     display: grid;
     grid-auto-flow: column-reverse;
+    margin: 0;
 }
 li img{
     max-height: 10em;
     margin: 1em;
     grid-area: 1 / 1/ 1 /2;
+}
+
+.person li:hover{
+    background-color: var(--hoverbackground);
+    border-radius: 3%;
+}
+
+
+/* MODAL STYLING */
+
+.modal-content{
+    display: none;
 }
