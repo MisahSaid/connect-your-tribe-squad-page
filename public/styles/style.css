@@ -1,80 +1,119 @@
-*, html{
+body {
+    background-color: #E8E8E8; /* Achtergrondkleur instellen */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Lettertype instellen */
 }
 
-:root{
-    --background: #F4DFE4;
-    --formbg: #E8E8E8;
+.container {
+    display: flex; /* Flexbox lay-out gebruiken */
 }
 
 
-body{
-    background-color: rosybrown;
+.sidenav {
+    flex: 1;
+    background-color: #333; /* Achtergrondkleur aanpassen indien nodig */
+    padding: 20px;
+    display: flex; /* Flexbox lay-out gebruiken */
+    flex-wrap: wrap; /* Items laten omvouwen */
+    justify-content: center; /* Items horizontaal centreren */
+    height: 800px; /* Hoogte aanpassen indien nodig */
 }
 
-main{
-    background-color: var(--formbg);
-    border-radius: 1%;
-    margin: 0 auto; /* stel de linker- en rechtermarges automatisch in */
-    margin-top: 10%;
+.nav-menu {
+    list-style: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: .5fr 5fr;
-    max-width: 70%;
-    max-height: 70vh;
-    justify-content: center;
-    overflow: hidden;
+    margin: 0;
+    display: flex; /* Flexbox lay-out gebruiken */
+    flex-wrap: wrap; /* Items laten omvouwen */
+    justify-content: center; /* Items horizontaal centreren */
+    align-items: center; /* Items verticaal centreren */
+    height: auto; /* Hoogte aanpassen indien nodig */
 }
 
 
-header{
-    grid-area: 1/ 2 / 2 / 3;
-    /* box-shadow: x-offset y-offset blur spread color; */
-    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: left; /* Align items to the start and end of the container */
-    align-items: center;
+.nav-menu li {
+    width: 100px; /* Breedte van elk item aanpassen */
+    height: 100px; /* Hoogte van elk item aanpassen */
+    margin: 5px; /* Marge aanpassen indien nodig */
+    display: flex; /* Flexbox lay-out gebruiken */
+    justify-content: center; /* Inhoud horizontaal centreren */
+    align-items: center; /* Inhoud verticaal centreren */
 }
 
-
-.person{
-    grid-area: 2 / 2 / 3 /3;
-    background-color: var(--background);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: auto; /* Allow vertical scrolling within the .person section */
-    max-height: 100%;
+.nav-menu li:nth-child(n+3) {
+    width: 200px; /* Breedte van items vanaf het derde item aanpassen */
 }
 
-.person a{
-    display: flex;
-    justify-content: center; /* Center the content horizontally within the anchor tag */
-    align-items: center
+.nav-menu li img {
+    width: 50px; /* Breedte van de afbeeldingen aanpassen */
+    height: 50px; /* Hoogte van de afbeeldingen aanpassen */
+    border-radius: 50%; /* Cirkelvorm creëren */
+    background-color: var(--circle-color); /* Achtergrondkleur instellen */
+    padding: 10px; /* Ruimte toevoegen voor spatiëring */
+    box-sizing: border-box; /* Padding opnemen in breedte en hoogte */
 }
 
-ul:nth-child(2){
-    list-style-type: none;
+/* Verschillende achtergrondkleuren voor elke afbeelding */
+.nav-menu li:nth-child(1) img {
+    background-color: #FF5733; /* Kleur aanpassen indien nodig */
+}
+
+.nav-menu li:nth-child(2) img {
+    background-color: #33FF57; /* Kleur aanpassen indien nodig */
+}
+
+.nav-menu li:nth-child(3) img {
+    background-color: #5733FF; /* Kleur aanpassen indien nodig */
+}
+
+.nav-menu li:nth-child(4) img {
+    background-color: #FF5733; /* Kleur aanpassen indien nodig */
+}
+
+.nav-menu li:nth-child(5) img {
+    background-color: #33FF57; /* Kleur aanpassen indien nodig */
+}
+
+.main-content {
+    flex: 3;
+    display: flex; /* Flexbox lay-out gebruiken */
+    flex-direction: column; /* Flexrichting instellen */
+}
+
+.sidebar-right {
+    background-color: #E8E8E8;
+    padding: 20px;
+    flex: 1;
+}
+
+.sidebar-right header {
+    background-color: white; /* Achtergrondkleur instellen op wit */
+    width: 1200px; /* Breedte aanpassen indien nodig */
+}
+
+.person {
+    display: flex; /* Flexbox lay-out gebruiken */
+    flex-wrap: wrap; /* Items laten omvouwen */
+    margin: 0;
     padding: 0;
 }
 
-form{
-    grid-area: 1 / 1 / 3 / 2;
+.person li {
+    width: calc(25% - 10px);
+    margin: 5px;
+    list-style: none;
+    text-align: center;
+    display: flex; /* Flexbox lay-out gebruiken */
+    flex-direction: column; /* Flexrichting instellen */
+    align-items: center; /* Items verticaal centreren */
+    flex-basis: calc(25% - 10px); /* Elk item neemt 25% van de containerbreedte in */
+    flex-grow: 1; /* Items laten groeien binnen de flexcontainer */
+    flex-shrink: 1; /* Items laten krimpen binnen de flexcontainer */
 }
 
-form ul{
-    background-color: var(--formbg);
-}
-
-li{
-    display: grid;
-    grid-auto-flow: column-reverse;
-}
-li img{
-    max-height: 10em;
-    margin: 1em;
-    grid-area: 1 / 1/ 1 /2;
+.person li img {
+    width: 100%; /* Breedte van de afbeeldingen aanpassen om de container te vullen */
+    height: auto; /* Aspectverhouding behouden */
+    margin-bottom: 10px;
 }

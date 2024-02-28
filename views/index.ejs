@@ -1,34 +1,40 @@
 <%- include('./partials/head') %>
-<div>
-  <main>
-    <header>
-      <h1>squad 1E</h1>
+
+<div class="container">
+  <div class="sidenav">
+    <!-- Add your sidenav content here -->
+    <ul class="nav-menu">
+      <!-- Add your sidenav images here -->
+      <li><a href="#"><img src="images/loupe.png" alt="Image 1"></a></li>
+      <li><a href="#"><img src="images/address(1).png" alt="Image 2"></a></li>
+      <li><a href="#"><img src="images/cake.png" alt="Image 3"></a></li>
+      <li><a href="#"><img src="images/team.png" alt="Image 4"></a></li>
+      <li><a href="#"><img src="images/user.png" alt="Image 5"></a></li>
+
+      <!-- Add more images as needed -->
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="sidebar-right">
+      <header>
+        <h1>squad 1E</h1>
         <div class="search">
           <img src="/images/search.svg">
           <p>search</p>
         </div>
-    </header>
-
-    <form>
-      <ul>
-        <li>Geografisch</li>
-        <li>Naam</li>
-        <li>Leeftijd</li>
-        <li>Nickname</li>
-        <li>Squad</li>
-      </ul>
-    </form>
-
-    <ul class="person">
+      </header>
+      <ul class="person">
         <% persons.forEach(person => { %>
-          <li>
-            <a href="./person/<%= person.id %>"><%= person.name %></a>
-            <img src="/images/<%= person.name.toLowerCase() %>-sonny.png">
-          </li>
+        <li>
+          <a href="./person/<%= person.id %>">
+            <img src="/images/<%= person.name.toLowerCase() %>-sonny.png" alt="<%= person.name %>">
+          </a>
+          <p><%= person.name %></p> <!-- Add this line to display the person's name -->
+        </li>
         <% }) %>
-    </ul>    
-  </main>
+      </ul>
+    </div>
+  </div>
 </div>
-
 
 <%- include('./partials/foot') %>
