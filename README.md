@@ -35,6 +35,11 @@ Node.js is een open-source en cross-platform omgeving waarmee je JavaScript buit
 ## Gebruik
 
 ## Bronnen
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
+- https://dev.to/pszponder/control-flow-in-javascript-loops-26bd
+- https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
+- https://ejs.co/
+
 
 ## Licentie
 
