@@ -24,8 +24,10 @@ Wat is Node, wat doen Express en EJS?
 Node.js is een open-source en cross-platform omgeving waarmee je JavaScript buiten de webbrowser kunt uitvoeren, met name op servers. Het wordt aangedreven door dezelfde engine als Google Chrome, wat ervoor zorgt dat het echt snel is.
 
 ### Express
+'Fast, unopinionated, minimalist web framework for Node.js'. Express is dus eigenlijk een webframework voor Node.js hiermee kun je snel en gemakkelijk webapplicaties en API's kunnen bouwen.
 
 ### EJS
+'EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.' EJS is een 'taal' die we gebruiken om HTML-markup te bouwen met gewone JS. Hiermee kun je dynamische websites maken door JS-code en HTML in één bestand te hebben, waardoor het makkelijker is om variabelen, loops, condities en functies te gebruiken om dynamische inhoud te genereren.
 
 ## Installatie
 <!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
