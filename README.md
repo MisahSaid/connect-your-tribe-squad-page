@@ -21,6 +21,7 @@
 Wat is Node, wat doen Express en EJS?
 
 ### Node
+Node.js is een open-source en cross-platform omgeving waarmee je JavaScript buiten de webbrowser kunt uitvoeren, met name op servers. Het wordt aangedreven door dezelfde engine als Google Chrome, wat ervoor zorgt dat het echt snel is.
 
 ### Express
 
